@@ -12,6 +12,9 @@
 obj/
 *obj/
 *.obj/
+bin/
+*.bin/
+*.bin
 
 # Linker output
 *.ilk
