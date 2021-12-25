@@ -9,6 +9,9 @@
 *.bin
 *.vs
 .vs/
+obj/
+*obj/
+*.obj/
 
 # Linker output
 *.ilk
