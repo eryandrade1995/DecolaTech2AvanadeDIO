@@ -2,6 +2,8 @@
 using ExmploPoo.Interfaces;
 using ExmploPoo.Models;
 using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace ExmploPoo
 {
@@ -10,9 +12,30 @@ namespace ExmploPoo
         static void Main(string[] args)
         {
             var caminho = "C:\\WorkFiles";
+            var caminhoPathCombine = Path.Combine(caminho, "PastaTest1");//Path.Combine - mescla as pastas adicionais com o diretorio da variável
+            var caminhoArquivo = Path.Combine(caminho, "ArquivoTest-Stream.txt");
+            var caminhoArquivoTest = Path.Combine(caminho, "ArquivoTest.txt");
+            var caminhoArquivoTestCopy = Path.Combine(caminho, "ArquivoTestBP.txt");
+            var listaString = new List<string> { "Jaguar F-Type", 
+                                                "Nissan Skyline GT-R", 
+                                                "BMW M3" };
+            var listaStringAppend = new List<string> { "Hyundai Veloster",
+                                                        "Golf TSI GTI",
+                                                        "Ferrari 812" };
+            var novoCaminhoArq = Path.Combine(caminho, "PastaTest2", "ArquivoTest-Stream.txt");
 
             FileHelper helper = new FileHelper();
-            helper.ListarDiretorios(caminho);
+
+            //helper.ListarDiretorios(caminho);
+            //helper.ListarArquivosDiretorios(caminho);
+            //helper.createDirect(caminhoPathCombine);//automatiza independente do SO a combinação de caracteres para determinados diretórios
+            //helper.ApagarDiretorio(caminhoPathCombine, true);
+            //helper.CreateTxt(caminhoArquivo, "Teste");
+            //helper.CreateTxtStream(caminhoArquivo, listaString);
+            //helper.AddTxtStream(caminhoArquivo, listaStringAppend);
+            //helper.MoveFile(caminhoArquivo, novoCaminhoArq, false);
+            //helper.CopyFile(caminhoArquivoTest, caminhoArquivoTestCopy, false); //copia um arquivo dentro do diretorio especificado por outro com a variável booleana false para não sobrescrever
+            helper.DeleteFile(caminhoArquivoTestCopy);
 
             //-------------------Interfaces-------------------//
 
