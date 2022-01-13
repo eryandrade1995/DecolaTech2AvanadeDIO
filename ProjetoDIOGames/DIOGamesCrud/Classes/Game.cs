@@ -59,6 +59,26 @@ namespace DIOGames
             return this.Excluido;
         }
 
+        public Gender returnGenero()
+        {
+            return Genero;
+        }
+
+        public string returnDescription()
+        {
+            return Descricao;
+        }
+
+        public int retornYear()
+        {
+            return Ano;
+        }
+
+        public string returnEnterprise()
+        {
+            return EnterpriseDev;
+        }
+
         public void Delet()
         {
             this.Excluido = true;
